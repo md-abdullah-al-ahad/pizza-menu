@@ -87,12 +87,19 @@ function Menu() {
   );
 }
 function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 24;
+  const isOpen = hour >= openHour && hour <= closeHour;
+
   return (
     <footer className="footer">
-      {new Date().toLocaleTimeString()}.{" "}
-      {new Date().getHours() >= 12 && new Date().getHours() <= 22
-        ? "We're currently open"
-        : "Sorry, We're closed"}
+      {isOpen && (
+        <div class="order">
+          <p>We're open untill {closeHour}:00. Come visit us or order online</p>
+          <button class="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
 }
