@@ -178,10 +178,72 @@ body {
   background-color: #e9bb24;
 }
 
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
+@media (max-width: 768px) {
+  body {
+    padding: 1.6rem;
+    padding-bottom: 4rem;
+  }
 
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/
+  .container {
+    gap: 3.2rem;
+  }
+
+  .header h1 {
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+  }
+
+  .header h1::before,
+  .header h1::after {
+    width: 2.8rem;
+  }
+
+  .menu > p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .pizzas {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .pizza {
+    gap: 1.6rem;
+  }
+
+  .pizza img {
+    width: min(35vw, 10rem);
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  .header h1::before,
+  .header h1::after {
+    width: 2rem;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .pizza img {
+    width: 8rem;
+  }
+}
